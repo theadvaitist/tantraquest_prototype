@@ -1,0 +1,21 @@
+[
+  {
+    "concept": "Particularity (Vi\u015be\u1e63a)",
+    "syllogism": [
+      "Pratij\u00f1\u0101: Dravya is different from Gu\u1e47a.",
+      "Hetu: Because it is a substratum.",
+      "Ud\u0101hara\u1e47a: Like Samav\u0101ya.",
+      "Upanaya: Gu\u1e47a depends on Dravya.",
+      "Nigamana: Therefore, Dravya has distinct Vi\u015be\u1e63a."
+    ],
+    "tantrayukti": "Vy\u0101pti-graha (Observation of universal concomitance)",
+    "missing": "Ud\u0101hara\u1e47a",
+    "options": [
+      "Pratij\u00f1\u0101",
+      "Hetu",
+      "Ud\u0101hara\u1e47a",
+      "Nigamana"
+    ],
+    "correct": "Ud\u0101hara\u1e47a"
+  }
+]
