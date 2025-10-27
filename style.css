@@ -1,0 +1,32 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f1ea;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #6b4e3d;
+  color: #fff;
+  padding: 1.5em 0;
+}
+main { padding: 2em; }
+#puzzle-block {
+  background: #fff8f0;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+#choices button {
+  background: #e4c59e;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 1.2em;
+  margin: 0.5em;
+  cursor: pointer;
+  font-weight: 600;
+}
+#choices button:hover { background: #d1b186; }
+#feedback { margin-top: 1em; font-weight: bold; }
