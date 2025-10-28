@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contribute — TantraQuest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Contribute a Puzzle</h1>
+      <p class="subtitle">Add / edit your Nyāya–Tantrayukti blocks</p>
+    </div>
+    <div class="controls">
+      <button id="closeBtn" class="icon-btn">Close</button>
+    </div>
+  </header>
+
+  <main>
+    <form id="contribForm" class="form-card">
+      <label>Contributor Name <input id="contribName" required /></label>
+      <label>Contributor Email <input id="contribEmail" type="email" required /></label>
+
+      <label>Concept <input id="concept" required /></label>
+      <label>Context / Scenario <textarea id="context" rows="2"></textarea></label>
+
+      <label>Pratijñā <textarea id="pratijna" rows="2"></textarea></label>
+      <label>Hetu <textarea id="hetu" rows="2"></textarea></label>
+      <label>Udāharaṇa <textarea id="udaharana" rows="2"></textarea></label>
+      <label>Upanaya <textarea id="upanaya" rows="2"></textarea></label>
+      <label>Nigamana <textarea id="nigamana" rows="2"></textarea></label>
+
+      <label>Choose Missing Nyāya Part
+        <select id="missingPart">
+          <option value="">— Select —</option>
+          <option value="pratijna">Pratijñā</option>
+          <option value="hetu">Hetu</option>
+          <option value="udaharana">Udāharaṇa</option>
+          <option value="upanaya">Upanaya</option>
+          <option value="nigamana">Nigamana</option>
+        </select>
+      </label>
+
+      <label>Tantrayukti Clue
+        <select id="tantrayuktiSelect"></select>
+      </label>
+      <label>Clue Explanation <input id="clueExp" /></label>
+
+      <label>Option 1 <input id="opt1" required /></label>
+      <label>Option 2 <input id="opt2" required /></label>
+      <label>Option 3 <input id="opt3" required /></label>
+      <label>Option 4 (optional) <input id="opt4" /></label>
+
+      <label>Correct Option (enter 1/2/3/4) <input id="correctIdx" type="number" min="1" max="4" required /></label>
+
+      <div class="form-actions">
+        <button type="submit" id="saveBtn" class="primary">Save Contribution</button>
+        <button type="button" id="clearBtn">Clear Form</button>
+      </div>
+      <div id="formMsg" class="muted"></div>
+    </form>
+
+    <section class="contrib-list card">
+      <h3>My Contributions (local)</h3>
+      <div id="myContribs"></div>
+      <button id="downloadBtn">Download All Contributions (JSON)</button>
+    </section>
+  </main>
+
+  <script src="contributor.js"></script>
+</body>
+</html>
