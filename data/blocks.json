@@ -1,14 +1,20 @@
 [
   {
-    "tantrayukti": "Adhikarana",
-    "question": "In the inference 'Fire is on the hill because it has smoke,' which part of the syllogism is missing?",
-    "missingPart": "Example (Udāharaṇa)",
-    "answer": "Where there is smoke, there is fire — as in a kitchen.",
+    "concept": "Particularity (Viśeṣa)",
+    "pratijna": "Dravya is different from Guṇa.",
+    "hetu": "Because it is a substratum.",
+    "udaharana": "Like Samavāya.",
+    "upanaya": "Guṇa depends on Dravya.",
+    "nigamana": "Therefore, Dravya has distinct Viśeṣa.",
+    "missingPart": "udaharana",
+    "tantrayukti": "Vyāpti-graha (Observation of universal concomitance)",
+    "clueExplanation": "Look for the illustrative example that demonstrates universal concomitance.",
     "options": [
-      "Where there is smoke, there is fire — as in a kitchen.",
-      "The hill has smoke.",
-      "Therefore, the hill has fire."
-    ]
+      "Pratijñā: Dravya is different from Guṇa.",
+      "Hetu: Because it is a substratum.",
+      "Udāharaṇa: Like Samavāya.",
+      "Nigamana: Therefore, Dravya has distinct Viśeṣa."
+    ],
+    "correctOptionIndex": 3
   }
 ]
-
