@@ -1,32 +1,66 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f1ea;
-  color: #333;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s;
 }
+
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #fff;
+}
+
+.dark-mode {
+  --bg: #111;
+  --text: #f9f9f9;
+  --card: #222;
+}
+
 header {
-  background: #6b4e3d;
-  color: #fff;
-  padding: 1.5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-main { padding: 2em; }
-#puzzle-block {
-  background: #fff8f0;
-  border-radius: 12px;
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+
+.top-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-#choices button {
-  background: #e4c59e;
-  border: none;
-  border-radius: 8px;
-  padding: 0.8em 1.2em;
-  margin: 0.5em;
+
+#puzzle-container {
+  margin: 20px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
   cursor: pointer;
-  font-weight: 600;
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
 }
-#choices button:hover { background: #d1b186; }
-#feedback { margin-top: 1em; font-weight: bold; }
+
+button:hover {
+  background-color: #45a049;
+}
+
+#contribute-section {
+  margin: 20px;
+  padding: 15px;
+  background: var(--card);
+  border-radius: 8px;
+}
