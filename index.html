@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TantraQuest – Nyāya Puzzle Game</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TantraQuest — Nyāya Puzzle</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>🧠 TantraQuest</h1>
-    <div class="top-right">
-      <span id="score">Score: 0</span>
-      <button id="themeToggle">🌞/🌙</button>
+  <header class="topbar">
+    <div class="brand">
+      <h1>TantraQuest</h1>
+      <p class="subtitle">Restore the reasoning — Nyāya puzzles</p>
+    </div>
+
+    <div class="controls">
+      <div id="scoreBox">Score: <span id="score">0</span></div>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+      <button id="contributeBtn" class="primary">Contribute</button>
     </div>
   </header>
 
   <main>
-    <div id="puzzle-container">
-      <h2 id="tantrayukti"></h2>
-      <p id="question"></p>
+    <section class="puzzle-card">
+      <h2 id="conceptTitle">—</h2>
 
-      <div id="options"></div>
-
-      <div id="missing-part" class="hidden">
-        <h3>Missing Part Revealed:</h3>
-        <p id="revealed-text"></p>
+      <div id="syllogism" class="syllogism-grid">
+        <!-- placeholders for 5 parts; one will be blank -->
+        <div class="nyaya-box" data-part="pratijna"><strong>Pratijñā</strong><div class="text" id="pratijnaText"></div></div>
+        <div class="nyaya-box" data-part="hetu"><strong>Hetu</strong><div class="text" id="hetuText"></div></div>
+        <div class="nyaya-box" data-part="udaharana"><strong>Udāharaṇa</strong><div class="text" id="udaharanaText"></div></div>
+        <div class="nyaya-box" data-part="upanaya"><strong>Upanaya</strong><div class="text" id="upanayaText"></div></div>
+        <div class="nyaya-box" data-part="nigamana"><strong>Nigamana</strong><div class="text" id="nigamanaText"></div></div>
       </div>
-    </div>
 
-    <button id="next-btn">Next Puzzle</button>
+      <div class="clue-box">
+        <label><strong>Tantrayukti clue:</strong></label>
+        <div id="tantrayuktiClue"></div>
+        <div id="clueExplanation" class="muted"></div>
+      </div>
 
-    <hr />
+      <div class="interaction-row">
+        <div class="part-select">
+          <label for="missingSelect">Identify the missing Nyāya part</label>
+          <select id="missingSelect">
+            <option value="">— Select —</option>
+            <option value="pratijna">Pratijñā</option>
+            <option value="hetu">Hetu</option>
+            <option value="udaharana">Udāharaṇa</option>
+            <option value="upanaya">Upanaya</option>
+            <option value="nigamana">Nigamana</option>
+          </select>
+        </div>
 
-    <section id="contribute-section">
-      <h3>Contribute a New Puzzle</h3>
-      <input type="text" id="newTantrayukti" placeholder="Tantrayukti Name" />
-      <textarea id="newQuestion" placeholder="Enter puzzle statement"></textarea>
-      <input type="text" id="newMissingPart" placeholder="Missing Nyaya Part" />
-      <input type="text" id="newAnswer" placeholder="Correct Answer Text" />
-      <button id="saveBlock">Save Block</button>
-      <p id="saveStatus"></p>
+        <div class="options-list">
+          <label><strong>Choose the correct missing statement</strong></label>
+          <div id="optionsContainer"></div>
+        </div>
+      </div>
+
+      <div id="resultMessage" class="result muted"></div>
     </section>
+
+    <div class="nav-row">
+      <button id="prevBtn">← Prev</button>
+      <button id="nextBtn">Next →</button>
+      <button id="exportContribBtn">Export My Contributions (JSON)</button>
+    </div>
   </main>
+
+  <footer class="footer">
+    <small>TantraQuest — Nyāya & Tantrayukti educational game • Demo prototype</small>
+  </footer>
 
   <script src="script.js"></script>
 </body>
