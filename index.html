@@ -3,35 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TantraQuest: The Nyāya Puzzle</title>
+  <title>TantraQuest – Nyāya Puzzle Game</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🧩 TantraQuest: The Nyāya Puzzle</h1>
-    <p>Fill the missing piece of the Nyāya syllogism — guided by Tantrayukti clues!</p>
+    <h1>🧠 TantraQuest</h1>
+    <div class="top-right">
+      <span id="score">Score: 0</span>
+      <button id="themeToggle">🌞/🌙</button>
+    </div>
   </header>
 
   <main>
-    <section id="puzzle-block">
-      <h2 id="concept-title">Concept: —</h2>
-      <div id="syllogism"></div>
-      <p id="clue"></p>
-    </section>
+    <div id="puzzle-container">
+      <h2 id="tantrayukti"></h2>
+      <p id="question"></p>
 
-    <section id="options">
-      <h3>Select the Missing Part:</h3>
-      <div id="choices"></div>
-      <button id="submit">Submit</button>
-    </section>
+      <div id="options"></div>
 
-    <section id="feedback"></section>
+      <div id="missing-part" class="hidden">
+        <h3>Missing Part Revealed:</h3>
+        <p id="revealed-text"></p>
+      </div>
+    </div>
+
+    <button id="next-btn">Next Puzzle</button>
+
+    <hr />
+
+    <section id="contribute-section">
+      <h3>Contribute a New Puzzle</h3>
+      <input type="text" id="newTantrayukti" placeholder="Tantrayukti Name" />
+      <textarea id="newQuestion" placeholder="Enter puzzle statement"></textarea>
+      <input type="text" id="newMissingPart" placeholder="Missing Nyaya Part" />
+      <input type="text" id="newAnswer" placeholder="Correct Answer Text" />
+      <button id="saveBlock">Save Block</button>
+      <p id="saveStatus"></p>
+    </section>
   </main>
 
-  <footer>
-    <p>Developed under Nyāya–Tantrayukti Educational Initiative © 2025</p>
-  </footer>
-
-  <script src="logic.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
