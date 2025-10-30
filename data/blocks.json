@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "c_1761633592015_aunulx",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Nyāya Epistemology",
+    "context": "Atomism is an important concept in Nyāya Epistemology.",
+    "pratijna": "Manas (mind) is atomic.",
+    "hetu": "Because it connects only one sense organ at a time.",
+    "udaharana": "Like an atom that occupies only one space.",
+    "upanaya": "Our experience confirms single-channel perception.",
+    "nigamana": "Therefore, manas is atomic.",
+    "missingPart": "udaharana",
+    "tantrayukti": "Drishtaanta",
+    "clueExplanation": "Drishtaanta — use of example to support reasoning.",
+    "options": [
+      "Like an atom that occupies only one space.",
+      "Like fire that spreads in all directions.",
+      "Like water that flows through multiple channels.",
+      "Like sound that is heard by multiple people."
+    ],
+    "correctOptionIndex": 0,
+    "createdAt": "2025-10-28T07:07:11.090Z"
+  },
+  {
+    "_id": "c_1761634277769_mwbf25",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Epistemological Debates in Indian Philosophy",
+    "context": "The debate on ‘Dream’ is central to distinguishing true cognition from false or illusory cognition.",
+    "pratijna": "Dreams are not valid means of knowledge (pramāṇa).",
+    "hetu": "Because they are sublated by waking experience.",
+    "udaharana": "Like the illusion of water in a mirage.",
+    "upanaya": "Dreams also appear real but are contradicted upon waking.",
+    "nigamana": "Therefore, dreams are not valid knowledge.",
+    "missingPart": "hetu",
+    "tantrayukti": "Uttarpaksha",
+    "clueExplanation": "Uttarpakṣa — counter-argument or rebuttal.",
+    "options": [
+      "Because everyone dreams at night.",
+      "Because they are sublated by waking experience.",
+      "Because dreams are vivid and memorable."
+    ],
+    "correctOptionIndex": 1,
+    "createdAt": "2025-10-28T07:14:06.747Z"
+  },
+  {
+    "_id": "c_1761634577488_7ogs36",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Indian Epistemology",
+    "context": "Relevant in discussions about invisible causes, unseen actions, or hidden truths in metaphysics or ethics.",
+    "pratijna": "Devadatta eats at night.",
+    "hetu": "Because he is gaining weight despite not eating during the day.",
+    "udaharana": "Like someone who remains healthy despite never eating during the day.",
+    "upanaya": "Devadatta is growing stronger though he never eats in public.",
+    "nigamana": "Therefore, Devadatta eats at night.",
+    "missingPart": "hetu",
+    "tantrayukti": "Arthaapatti",
+    "clueExplanation": "Arthāpatti — presumptive reasoning based on unexplained facts.",
+    "options": [
+      "Because he sleeps early.",
+      "Because he is a disciplined person.",
+      "Because he is gaining weight despite not eating during the day."
+    ],
+    "correctOptionIndex": 2,
+    "createdAt": "2025-10-28T07:18:40.447Z"
+  },
+  {
+    "_id": "c_1761636429543_y47i68",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Metaphysical Debates",
+    "context": "Debates on the Self being distinct from the Body, especially in Nyāya and Vedānta traditions.",
+    "pratijna": "The self (ātman) is distinct from the body.",
+    "hetu": "Because the body undergoes change, while the self remains constant.",
+    "udaharana": "Like a person who remembers childhood despite bodily change.",
+    "upanaya": "Even when the body ages or is injured, the sense of 'I' persists unchanged.",
+    "nigamana": "Therefore, the self is distinct from the body.",
+    "missingPart": "udaharana",
+    "tantrayukti": "Prasanga",
+    "clueExplanation": "Prasaṅga — consequence-based reasoning.",
+    "options": [
+      "Like a person who remembers childhood despite bodily change.",
+      "Like a mirror reflecting different faces.",
+      "Like a shadow that changes shape."
+    ],
+    "correctOptionIndex": 0,
+    "createdAt": "2025-10-28T07:27:09.543Z"
+  },
+  {
+    "_id": "c_1761643776459_70ojuf",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Sāṅkhya Metaphysics",
+    "context": "Distinction between Puruṣa (consciousness) and Prakṛti (matter) is foundational in Sāṅkhya Philosophy.",
+    "pratijna": "Puruṣa (pure consciousness) is distinct from Prakṛti (primordial matter).",
+    "hetu": "Because Puruṣa is inactive and unchanging, while Prakṛti is dynamic and mutable.",
+    "udaharana": "Like a witness who observes a play but does not act in it.",
+    "upanaya": "As previously shown, Puruṣa remains unchanged while Prakṛti undergoes transformation, just like the passive witness in the example.",
+    "nigamana": "Therefore, Puruṣa is distinct from Prakṛti.",
+    "missingPart": "upanaya",
+    "tantrayukti": "Āthikrāntavekṣaṇa",
+    "clueExplanation": "Āthikrāntavekṣaṇa — retrospective reinforcement of earlier reasoning; look back at the Hetu and Udāharaṇa.",
+    "options": [
+      "As previously shown, Puruṣa remains unchanged while Prakṛti undergoes transformation, just like the passive witness in the example.",
+      "Prakṛti is composed of three guṇas.",
+      "Consciousness is the source of action."
+    ],
+    "correctOptionIndex": 0,
+    "createdAt": "2025-10-28T09:29:36.459Z"
+  },
+  {
+    "_id": "c_1761644319517_sqkq9j",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Advaita Vedānta Metaphysics",
+    "context": "Clarity of expression is crucial to distinguish subtle concepts like Brahman and Māyā, especially in Advaita Vedānta.",
+    "pratijna": "Brahman is beyond all attributes (nirguṇa).",
+    "hetu": "Because it is not affected by change, division, or limitation.",
+    "udaharana": "Like space, which remains unaffected by the objects within it.",
+    "upanaya": "Brahman, like space, remains untouched by the qualities of the manifest world.",
+    "nigamana": "Therefore, Brahman is beyond all attributes.",
+    "missingPart": "nigamana",
+    "tantrayukti": "Yoga",
+    "clueExplanation": "Yoga — proper syntactic and semantic connection of ideas.",
+    "options": [
+      "Therefore, Brahman is the cause of creation.",
+      "Therefore, Brahman is identical with Māyā.",
+      "Therefore, Brahman is beyond all attributes."
+    ],
+    "correctOptionIndex": 2,
+    "createdAt": "2025-10-28T09:38:39.517Z"
+  },
+  {
+    "_id": "c_1761645405471_o4onuk",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Indic Aesthetic Theory",
+    "context": "Artful portrayal transforms fear into a relishable experience.",
+    "pratijna": "Bhayānaka Rasa (the aesthetic experience of fear) is a valid rasa.",
+    "hetu": "Because it evokes a stable aesthetic experience when mediated through art, not raw terror.",
+    "udaharana": "Like Bībhatsa Rasa (disgust), which also arises from unpleasant stimuli but is still aesthetically processed.",
+    "upanaya": "Bhayānaka Rasa arises from vibhāvas like threatening situations and is relished through dramatic portrayal.",
+    "nigamana": "Therefore, Bhayānaka Rasa is a valid rasa.",
+    "missingPart": "hetu",
+    "tantrayukti": "Pratyutsaara",
+    "clueExplanation": "Pratyutsaara — refutation of an opposing view.",
+    "options": [
+      "Because fear is a natural emotion.",
+      "Because it evokes a stable aesthetic experience when mediated through art, not raw terror.",
+      "Because Bhayānaka Rasa is mentioned in Nāṭyaśāstra."
+    ],
+    "correctOptionIndex": 1,
+    "createdAt": "2025-10-28T09:56:45.471Z"
+  },
+  {
+    "_id": "c_1761645943460_wfiaa3",
+    "contributorName": "Meera Narayanankutty",
+    "contributorEmail": "meeranarayanankutty5@gmail.com",
+    "concept": "Dharma / Ethics",
+    "context": "Partial references to smṛti or śruti texts are often used to justify ethical or ritual decisions.",
+    "pratijna": "A guest (atithi) must be honored like a deity.",
+    "hetu": "Because the Manusmṛti states ‘Atithir devo bhava’ — the guest is verily a god.",
+    "udaharana": "Like the ritual offering made to Agni, which is done with reverence and care.",
+    "upanaya": "The guest is received with water, seat, and food, just as offerings are made to divine beings.",
+    "nigamana": "Therefore, a guest must be honored like a deity.",
+    "missingPart": "hetu",
+    "tantrayukti": "Pradesha",
+    "clueExplanation": "Pradeśa — partial citation of authoritative text.",
+    "options": [
+      "Because the Manusmṛti states ‘Atithir devo bhava’ — the guest is verily a god.",
+      "Because guests are usually tired.",
+      "Because feeding others brings merit.",
+      "Because guests may be spies."
+    ],
+    "correctOptionIndex": 0,
+    "createdAt": "2025-10-28T10:05:43.460Z"
+  }
+]

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TantraQuest — Nyāya Puzzle</title>
+  <meta name="description" content="Restore the reasoning — Nyāya puzzles based on ancient Indian logic" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            sand: { 50: '#fdfbf7', 100: '#f9f5ed', 200: '#f4f1ea', 300: '#e8dcc8', 400: '#d4c5a8', 500: '#b8a688', 600: '#9d8b6f', 700: '#7d6e58', 800: '#5c4f3e', 900: '#433629' },
+            terracotta: { 50: '#fef5f3', 100: '#fde9e5', 200: '#fbd3cc', 300: '#f4b5a6', 400: '#e89780', 500: '#d9775e', 600: '#c45a42', 700: '#a1462f', 800: '#7d3725', 900: '#5f2a1c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-sand-50 via-sand-100 to-sand-200 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 min-h-screen transition-colors">
+  <!-- Header -->
+  <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-b border-sand-300/50 dark:border-slate-700/50 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex-1">
+          <h1 class="text-2xl sm:text-3xl font-bold text-terracotta-700 dark:text-terracotta-400 tracking-tight">TantraQuest</h1>
+          <p class="text-xs sm:text-sm text-sand-700 dark:text-sand-300 mt-0.5">Restore the reasoning — Nyāya puzzles</p>
+        </div>
+
+        <div class="flex items-center gap-3 sm:gap-4">
+          <div id="scoreBox" class="bg-terracotta-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md">
+            Score: <span id="score">0</span>
+          </div>
+          <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-lg bg-sand-200 dark:bg-slate-700 hover:bg-sand-300 dark:hover:bg-slate-600 transition-colors text-xl" title="Toggle theme">
+            <span class="dark:hidden">🌙</span>
+            <span class="hidden dark:inline">☀️</span>
+          </button>
+          <button id="contributeBtn" class="hidden sm:block bg-terracotta-600 hover:bg-terracotta-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md">
+            Contribute
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-6 sm:py-10">
+    <!-- Puzzle Card -->
+    <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-sand-200 dark:border-slate-700 overflow-hidden transition-colors">
+      <div class="bg-gradient-to-r from-terracotta-500 to-terracotta-600 px-6 py-5">
+        <div id="questionNumber" class="text-base sm:text-lg font-semibold text-sand-200/90 mb-1"></div>
+        <h2 id="conceptTitle" class="text-xl sm:text-2xl font-bold text-white">—</h2>
+      </div>
+
+      <div class="p-6 sm:p-8">
+        <!-- Syllogism Grid -->
+        <div id="syllogism" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <!-- Pratijna -->
+          <div class="nyaya-box border-2 border-sand-300 dark:border-slate-600 rounded-xl p-4 bg-gradient-to-br from-white to-sand-50 dark:from-slate-700 dark:to-slate-700/50 hover:shadow-md transition-all" data-part="pratijna">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-terracotta-500"></div>
+              <strong class="text-terracotta-700 dark:text-terracotta-400 font-semibold text-sm uppercase tracking-wide">Pratijñā</strong>
+            </div>
+            <div class="text text-sand-900 dark:text-sand-100 text-sm leading-relaxed min-h-[40px]" id="pratijnaText"></div>
+          </div>
+
+          <!-- Hetu -->
+          <div class="nyaya-box border-2 border-sand-300 dark:border-slate-600 rounded-xl p-4 bg-gradient-to-br from-white to-sand-50 dark:from-slate-700 dark:to-slate-700/50 hover:shadow-md transition-all" data-part="hetu">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-terracotta-500"></div>
+              <strong class="text-terracotta-700 dark:text-terracotta-400 font-semibold text-sm uppercase tracking-wide">Hetu</strong>
+            </div>
+            <div class="text text-sand-900 dark:text-sand-100 text-sm leading-relaxed min-h-[40px]" id="hetuText"></div>
+          </div>
+
+          <!-- Udaharana -->
+          <div class="nyaya-box border-2 border-sand-300 dark:border-slate-600 rounded-xl p-4 bg-gradient-to-br from-white to-sand-50 dark:from-slate-700 dark:to-slate-700/50 hover:shadow-md transition-all" data-part="udaharana">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-terracotta-500"></div>
+              <strong class="text-terracotta-700 dark:text-terracotta-400 font-semibold text-sm uppercase tracking-wide">Udāharaṇa</strong>
+            </div>
+            <div class="text text-sand-900 dark:text-sand-100 text-sm leading-relaxed min-h-[40px]" id="udaharanaText"></div>
+          </div>
+
+          <!-- Upanaya -->
+          <div class="nyaya-box border-2 border-sand-300 dark:border-slate-600 rounded-xl p-4 bg-gradient-to-br from-white to-sand-50 dark:from-slate-700 dark:to-slate-700/50 hover:shadow-md transition-all" data-part="upanaya">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-terracotta-500"></div>
+              <strong class="text-terracotta-700 dark:text-terracotta-400 font-semibold text-sm uppercase tracking-wide">Upanaya</strong>
+            </div>
+            <div class="text text-sand-900 dark:text-sand-100 text-sm leading-relaxed min-h-[40px]" id="upanayaText"></div>
+          </div>
+
+          <!-- Nigamana -->
+          <div class="nyaya-box border-2 border-sand-300 dark:border-slate-600 rounded-xl p-4 bg-gradient-to-br from-white to-sand-50 dark:from-slate-700 dark:to-slate-700/50 hover:shadow-md transition-all md:col-span-2" data-part="nigamana">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-terracotta-500"></div>
+              <strong class="text-terracotta-700 dark:text-terracotta-400 font-semibold text-sm uppercase tracking-wide">Nigamana</strong>
+            </div>
+            <div class="text text-sand-900 dark:text-sand-100 text-sm leading-relaxed min-h-[40px]" id="nigamanaText"></div>
+          </div>
+        </div>
+
+        <!-- Clue Box -->
+        <div class="clue-box bg-gradient-to-r from-terracotta-50 to-sand-50 dark:from-terracotta-900/20 dark:to-slate-700/50 border-l-4 border-terracotta-500 rounded-lg p-5 mb-8 transition-colors">
+          <label class="block text-terracotta-800 dark:text-terracotta-300 font-semibold mb-2 text-sm uppercase tracking-wide">🔍 Tantrayukti Clue:</label>
+          <div id="tantrayuktiClue" class="text-sand-900 dark:text-sand-100 font-medium mb-2"></div>
+          <div id="clueExplanation" class="text-sand-600 dark:text-sand-300 text-sm italic"></div>
+        </div>
+
+        <!-- Interaction Row -->
+        <div class="interaction-row space-y-6">
+          <!-- Part Select -->
+          <div class="part-select">
+            <label for="missingSelect" class="block text-sand-800 dark:text-sand-200 font-semibold mb-3 text-sm">
+              Step 1: Identify the missing Nyāya part
+            </label>
+            <select id="missingSelect" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none focus:ring-2 focus:ring-terracotta-500 focus:border-transparent cursor-pointer hover:border-terracotta-400 dark:hover:border-terracotta-500 transition-all">
+              <option value="">— Select the missing part —</option>
+              <option value="pratijna">Pratijñā</option>
+              <option value="hetu">Hetu</option>
+              <option value="udaharana">Udāharaṇa</option>
+              <option value="upanaya">Upanaya</option>
+              <option value="nigamana">Nigamana</option>
+            </select>
+          </div>
+
+          <!-- Options List -->
+          <div class="options-list">
+            <label class="block text-sand-800 dark:text-sand-200 font-semibold mb-3 text-sm">
+              Step 2: Choose the correct missing statement
+            </label>
+            <div id="optionsContainer" class="space-y-3"></div>
+          </div>
+        </div>
+
+        <!-- Result Message -->
+        <div id="resultMessage" class="result mt-6 p-4 rounded-lg text-center font-semibold text-sm hidden"></div>
+      </div>
+    </section>
+
+    <!-- Navigation Row -->
+    <div class="nav-row flex flex-wrap items-center justify-center gap-3 mt-6">
+      <button id="prevBtn" class="px-6 py-3 bg-sand-700 hover:bg-sand-800 text-white rounded-xl font-medium shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+        ← Prev
+      </button>
+      <button id="nextBtn" class="px-6 py-3 bg-terracotta-600 hover:bg-terracotta-700 text-white rounded-xl font-medium shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+        Next →
+      </button>
+      <button id="exportContribBtn" class="px-6 py-3 bg-sand-600 hover:bg-sand-700 text-white rounded-xl font-medium shadow-md transition-all hover:shadow-lg hidden">
+        Export Contributions
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 mt-12">
+    <small class="text-sand-600 dark:text-sand-400 text-xs">TantraQuest — Nyāya & Tantrayukti educational game • Demo prototype</small>
+  </footer>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Result — TantraQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            sand: { 50: '#fdfbf7', 100: '#f9f5ed', 200: '#f4f1ea', 300: '#e8dcc8', 400: '#d4c5a8', 500: '#b8a688', 600: '#9d8b6f', 700: '#7d6e58', 800: '#5c4f3e', 900: '#433629' },
+            terracotta: { 50: '#fef5f3', 100: '#fde9e5', 200: '#fbd3cc', 300: '#f4b5a6', 400: '#e89780', 500: '#d9775e', 600: '#c45a42', 700: '#a1462f', 800: '#7d3725', 900: '#5f2a1c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-sand-50 via-sand-100 to-sand-200 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 min-h-screen transition-colors font-sans">
+  <main class="flex flex-col justify-center items-center min-h-screen px-4">
+    <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-sand-200 dark:border-slate-700 overflow-hidden p-12 flex flex-col items-center w-full max-w-md transition-colors">
+      <h1 class="text-2xl sm:text-3xl font-bold text-terracotta-700 dark:text-terracotta-400 text-center mb-6 tracking-tight">Quiz Completed!</h1>
+      <div id="scoreSummary" class="text-sand-800 dark:text-sand-100 text-center mb-8">
+        <!-- JS inserts score/percent here  -->
+      </div>
+      <div id="encourageMsg" class="text-lg font-semibold text-terracotta-700 dark:text-terracotta-300 text-center mb-8"></div>
+      <button id="restartBtn" class="bg-terracotta-600 hover:bg-terracotta-700 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-md text-lg">
+        Try Again
+      </button>
+    </section>
+    <footer class="text-center py-8 mt-12">
+      <small class="text-sand-600 dark:text-sand-400 text-xs">TantraQuest — Nyāya & Tantrayukti educational game • Demo prototype</small>
+    </footer>
+  </main>
+  <script src="../scripts/result.js"></script>
+</body>
+</html>

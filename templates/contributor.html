@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contribute — TantraQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            sand: { 50: '#fdfbf7', 100: '#f9f5ed', 200: '#f4f1ea', 300: '#e8dcc8', 400: '#d4c5a8', 500: '#b8a688', 600: '#9d8b6f', 700: '#7d6e58', 800: '#5c4f3e', 900: '#433629' },
+            terracotta: { 50: '#fef5f3', 100: '#fde9e5', 200: '#fbd3cc', 300: '#f4b5a6', 400: '#e89780', 500: '#d9775e', 600: '#c45a42', 700: '#a1462f', 800: '#7d3725', 900: '#5f2a1c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-sand-50 via-sand-100 to-sand-200 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 min-h-screen transition-colors">
+  <!-- Header -->
+  <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-b border-sand-300/50 dark:border-slate-700/50 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex-1">
+          <h1 class="text-2xl sm:text-3xl font-bold text-terracotta-700 dark:text-terracotta-400 tracking-tight">Contribute a Puzzle</h1>
+          <p class="text-xs sm:text-sm text-sand-700 dark:text-sand-300 mt-0.5">Add / edit your Nyāya–Tantrayukti blocks</p>
+        </div>
+        <button id="closeBtn" class="ml-8 px-4 py-2 rounded-lg font-medium bg-terracotta-600 hover:bg-terracotta-700 text-white transition-colors text-base" title="Close">Close</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="max-w-3xl mx-auto px-4 py-6 sm:py-10">
+    <!-- Contribution Form Card -->
+    <form id="contribForm" class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-sand-200 dark:border-slate-700 p-8 mb-10 transition-colors">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Contributor Name</label>
+          <input id="contribName" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Contributor Email</label>
+          <input id="contribEmail" type="email" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Concept</label>
+        <input id="concept" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+      </div>
+      <div class="mb-4">
+        <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Context / Scenario</label>
+        <textarea id="context" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Pratijñā</label>
+          <textarea id="pratijna" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Hetu</label>
+          <textarea id="hetu" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Udāharaṇa</label>
+          <textarea id="udaharana" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Upanaya</label>
+          <textarea id="upanaya" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Nigamana</label>
+          <textarea id="nigamana" rows="2" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></textarea>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Choose Missing Nyāya Part</label>
+          <select id="missingPart" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3">
+            <option value="">— Select —</option>
+            <option value="pratijna">Pratijñā</option>
+            <option value="hetu">Hetu</option>
+            <option value="udaharana">Udāharaṇa</option>
+            <option value="upanaya">Upanaya</option>
+            <option value="nigamana">Nigamana</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Tantrayukti Clue</label>
+          <select id="tantrayuktiSelect" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3"></select>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Clue Explanation</label>
+        <input id="clueExp" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Option 1</label>
+          <input id="opt1" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Option 2</label>
+          <input id="opt2" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Option 3</label>
+          <input id="opt3" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Option 4 (optional)</label>
+          <input id="opt4" class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-sand-800 dark:text-sand-200 text-sm">Correct Option (enter 1/2/3/4)</label>
+          <input id="correctIdx" type="number" min="1" max="4" required class="w-full px-4 py-3 border-2 border-sand-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-700 text-sand-900 dark:text-sand-100 font-medium focus:outline-none mb-3" />
+        </div>
+      </div>
+      <div class="flex gap-4 mt-6">
+        <button type="submit" id="saveBtn" class="bg-terracotta-600 hover:bg-terracotta-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md">Save Contribution</button>
+        <button type="button" id="clearBtn" class="bg-sand-700 hover:bg-sand-800 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md">Clear Form</button>
+      </div>
+      <div id="formMsg" class="mt-3 text-sm"></div>
+    </form>
+
+    <!-- Contribution List Card -->
+    <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-sand-200 dark:border-slate-700 py-8 px-6 transition-colors mb-10 contrib-list">
+      <h3 class="text-lg font-semibold mb-6 text-terracotta-700 dark:text-terracotta-300">My Contributions (local)</h3>
+      <div id="myContribs"></div>
+      <button id="downloadBtn" class="mt-4 bg-terracotta-600 hover:bg-terracotta-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md">Download All Contributions (JSON)</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 mt-12">
+    <small class="text-sand-600 dark:text-sand-400 text-xs">TantraQuest — Nyāya & Tantrayukti educational game • Demo prototype</small>
+  </footer>
+  <script src="../scripts/contributor.js"></script>
+</body>
+</html>
